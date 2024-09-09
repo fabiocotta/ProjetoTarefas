@@ -5,7 +5,7 @@ const SQLite = sqlite3.verbose();
 
 function query(command, params, method = 'all') {
     return new Promise(function (resolve, reject) {
-        db[method](command, params, function(error, result) {
+        db[method](command, params, function (error, result) {
             if (error)
                 reject(error)
             else

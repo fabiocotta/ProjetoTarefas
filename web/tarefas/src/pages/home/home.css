@@ -1,0 +1,34 @@
+.container {
+    background-color: #1b1a41;
+    padding: 20px;
+    max-width: 400px;
+    margin-top: 50px;
+}
+
+.cad-tarefa {
+    margin-top: 20px;
+
+}
+
+.tarefa-input {
+    background: none;
+    border: 1px solid #969595;
+    padding: 0.5rem 1rem;
+    width: 265px;
+    color: white;
+}
+
+.tarefa-input::placeholder {
+    color: #848484;
+}
+
+
+.tarefa-btn {
+    padding: 0.55rem;
+    border: none;
+    cursor: pointer;
+}
+
+.lista-box {
+    margin-top: 20px;
+}

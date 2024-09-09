@@ -1,0 +1,14 @@
+.tarefa-edit{
+    background-color:none;
+    margin: 20px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tarefa-edit-acoes{
+    display: flex;
+    align-items: center;
+}
+
