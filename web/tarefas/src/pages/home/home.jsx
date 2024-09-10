@@ -1,7 +1,7 @@
 import "./home.css";
 import Tarefa from "../../components/tarefa/tarefa.jsx";
 import TarefaEdit from "../../components/tarefa-edit/tarefa-edit.jsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { v4 } from "uuid";
 import api from "../../utils/api.js";
 
@@ -93,10 +93,23 @@ function Home() {
 
     }
 
+    const ListarTarefas = () => {
+        api.get("/tarefas")
+        .then( resp => {
+
+        })
+        .catch(err =>{
+
+        });
+
+    }
+
+    useEffect(() => {
+        ListarTarefas();
+    }, []);
+
     return <div className="container">
         <h2>Quais são os planos para hoje?</h2>
-
-
         <div className="cad-tarefa">
             <input value={descricao} onChange={(e) => setDescricao(e.target.value)} className="tarefa-input" placeholder="Descreva sua tarefa..." type="text" name="tarefa" id="tarefa" />
             <button onClick={AddTarefa} className="tarefa-btn" >Inserir Tarefa</button>
@@ -122,13 +135,9 @@ function Home() {
                             onClickDelete={DeleteTarefa}
                             onClickEdit={EditTarefa}
                             onClickConcluir={TarefaConcluida} />
-
                 })
             }
-
         </div>
-
     </div>
 }
-
 export default Home;
