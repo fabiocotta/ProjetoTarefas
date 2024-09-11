@@ -96,9 +96,11 @@ function Home() {
     const ListarTarefas = () => {
         api.get("/tarefas")
         .then( resp => {
+            setTarefas(resp.data);
 
         })
         .catch(err =>{
+            console.log(err)
 
         });
 
