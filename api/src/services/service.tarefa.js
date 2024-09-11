@@ -53,8 +53,6 @@ async function StatusTarefa(id_tarefa, concluido) {
 
       //aqui fazemos a validacao
 
-      if (!concluido)
-        throw "Informa se a tarefa foi concluída";
 
     if (concluido != 0 && concluido != 1)
         throw "O parâmetro concluído não é válido (deve ser 0 ou 1)";

@@ -32,3 +32,10 @@ body{
     fill: rgb(240, 54, 54);
 
 }
+
+.error {
+    background-color: red;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
